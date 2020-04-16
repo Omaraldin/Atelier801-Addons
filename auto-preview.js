@@ -3,7 +3,7 @@
 // @namespace    http://atelier801.com/
 // @version      1.0
 // @description  Auto preview bbcode message for Atelier801 forums
-// @author       Omaraldin Khashab (Discord: Omaraldin#1661)
+// @author       Omaraldin Khashab (Discord: Omaraldin#4171)
 // @match        https://atelier801.com/*
 // @grant        none
 // ==/UserScript==
