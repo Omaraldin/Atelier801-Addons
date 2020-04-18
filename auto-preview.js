@@ -11,7 +11,7 @@
 (function() {
 	'use strict';
 
-	let elementId = $('#message_reponse').length ? 'message_reponse' : $('#presentation').length ? 'presentation' : $('#message_conversation').length ? 'message_conversation' : '',
+	let elementId = $('#message_reponse').length ? 'message_reponse' : $('#presentation').length ? 'presentation' : $('#message_conversation').length ? 'message_conversation' : 'message_sujet' ? $('#message_sujet').length : '',
 		messageElement = $(`#${elementId}`),
 		bbcodeElements = $(`#outils_${elementId}`),
 		previewElement = $(`#previsualisation_${elementId}`);
