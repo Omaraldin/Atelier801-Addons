@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Atelier801 BBCode Auto Preview
-// @namespace    http://atelier801.com/
+// @namespace    https://atelier801.com/
 // @version      1.0
 // @description  Auto preview bbcode message for Atelier801 forums
 // @author       Omaraldin Khashab (Discord: Omaraldin#4171)
@@ -11,12 +11,12 @@
 (function() {
 	'use strict';
 
-	let elementId = $('#message_reponse').length ? 'message_reponse' : $('#presentation').length ? 'presentation' : $('#message_conversation').length ? 'message_conversation' : 'message_sujet' ? $('#message_sujet').length : '',
+	let elementId = $('#message_reponse').length ? 'message_reponse' : $('#presentation').length ? 'presentation' : $('#message_conversation').length ? 'message_conversation' : $('#message_sujet').length ? 'message_sujet' : '',
 		messageElement = $(`#${elementId}`),
 		bbcodeElements = $(`#outils_${elementId}`),
 		previewElement = $(`#previsualisation_${elementId}`);
 
-	let flags = ["sa", "gb", "fr", "br", "es", "tr", "pl", "hu", "ro", "vk", "nl", "de", "id", "ru", "cn", "ph", "lt", "jp", "fi", "il", "it", "cz", "hr", "sk", "bg", "lv", "ee", "xx"];
+    let flags = ["sa", "gb", "fr", "br", "es", "tr", "pl", "hu", "ro", "vk", "nl", "de", "id", "ru", "cn", "ph", "lt", "jp", "fi", "il", "it", "cz", "hr", "sk", "bg", "lv", "ee", "xx"];
 
 	if (messageElement.length && localStorage.getItem("autoPreview") === 'true')
 		$('#previsualisation_message_reponse').html(`<div class='cadre cadre-message cadre-previsualisation'>${convertBBCode2HTML(messageElement.val())}</div>`);
